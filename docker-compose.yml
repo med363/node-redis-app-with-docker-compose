@@ -1,14 +1,14 @@
 version: "3"
 services:
  http:
- image: nodejs-redis-app
- ports:
- - "80:8080"
- depends_on:
- - redis
- networks:
- - frontend
- - backend
+  image: nodejs-redis-app
+  ports:
+   - "80:8080"
+  depends_on:
+   - redis
+  networks:
+  - frontend
+  - backend
  redis:
   image: redis
   networks:
